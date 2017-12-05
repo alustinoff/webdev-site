@@ -1,0 +1,6 @@
+dowmload repo
+
+cmd -> cd path -> npm install
+
+cmd -> cd path -> gulp
+
