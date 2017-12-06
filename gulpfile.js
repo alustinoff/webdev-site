@@ -15,6 +15,7 @@ var useref = require('gulp-useref');
 var browserSync = require('browser-sync').create();
 var wait = require('gulp-wait');
 var babel = require('gulp-babel');
+var svgSprite = require("gulp-svg-sprites");
 // Задача с названием 'default' запускается автоматически по команде 'gulp' в консоле.
 // Эта конструкция работает синхронно, сначала выполняется задача 'clean' и только после ее завершнения запускается 'dev'.
 
@@ -73,6 +74,12 @@ gulp.task('minijs', function() {   //Минификация скриптов.
 	gulp.src('./js/*.js')
 		.pipe(uglify()) 
 		.pipe(gulp.dest('./js/mini/'));
+});
+
+gulp.task('svgsprite', function () {
+    return gulp.src('./svg/welcome/*.svg')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("./svg/welcome/done"));
 });
 
 
