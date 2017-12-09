@@ -1,6 +1,6 @@
 Устинов Александр
 
-Сборка gulp + webpack
+Сборка gulp4 + webpack3
 
 как запустить сборку:
 1) copy this repo
