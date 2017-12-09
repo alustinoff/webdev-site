@@ -4,25 +4,26 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": ""
+    "gulp-cli": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "browser-sync": "",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "",
     "gulp-babel": "",
-    "gulp-clean": "",
     "gulp-compass": "",
     "gulp-concat": "",
     "gulp-cssnano": "",
-    "gulp-fontgen": "^0.2.5",
     "gulp-notify": "",
     "gulp-plumber": "",
+    "gulp-pug": "^3.3.0",
     "gulp-rename": "",
     "gulp-sass": "",
     "gulp-sourcemaps": "",
@@ -30,6 +31,9 @@
     "gulp-uglify": "",
     "gulp-useref": "",
     "gulp-wait": "",
-    "gulp-wiredep": ""
+    "gulp-webpack": "^1.5.0",
+    "gulp-wiredep": "",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^3.10.0"
   }
 }

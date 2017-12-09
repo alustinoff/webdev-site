@@ -6,6 +6,9 @@
 	flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    // height: 100%;
+	    position: relative;
+	    overflow: hidden;
 }
 
 .welcome .container{
@@ -151,8 +154,8 @@
 	font-family: roboto-medium;
 	display: block;
 	width: 100%;
-	padding-top: 14px;
-	padding-bottom: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	text-align: center;
 }
 
@@ -162,4 +165,86 @@
 	margin-bottom: 30px;
 	text-align: center;
 	font-family: roboto-regular;
+	margin-top: -25px;
 }
+
+.wrapper:after{
+		content: "";
+		display: block;
+		height: 44px;
+		z-index: 0;
+	}
+	.footer-line{
+		margin-bottom: 0;
+	    margin-top: -44px;
+	    height: 44px;
+	    position: relative;
+	    z-index: 10;
+	}
+
+@media screen and (max-width: 1200px){
+	.welcome .header{
+		justify-content: flex-end;
+	    padding: 10px 25px 0 0;
+	    margin-bottom: 25px;
+	}
+
+	.welcome .auth-button{
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+	.container{
+		max-width: 768px;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.plate{
+		width: 348px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.wrapper.welcome{
+	    height: 100%;
+	    position: relative;
+	    overflow: hidden;
+	}
+
+	.container{
+		max-width: 320px;
+		margin-bottom: 40px;
+	}
+
+	.wrapper:after{
+		content: "";
+		display: block;
+		height: 46px;
+		z-index: 0;
+	}
+
+	.welcome .header{
+		justify-content: center;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	
+	.welcome .auth-button{
+		position: relative;
+	    top: auto;
+	    right: auto;
+	    margin-top: 10px;
+	    margin-bottom: 36px;
+	}
+
+	.footer-line{
+		margin-bottom: 0;
+	    margin-top: -46px;
+	    height: 46px;
+	    position: relative;
+	    z-index: 10;
+	}
+	
+}
+

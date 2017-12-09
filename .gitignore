@@ -1,4 +1,5 @@
 node_modules
-fonts-files
+package-lock.json
+
+font-files
 svg
-help to start.txt
