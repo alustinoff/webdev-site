@@ -18,6 +18,7 @@ var svgSprite = require("gulp-svg-sprites");
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+var pug = require('gulp-pug');
 
 
 const path = {
@@ -29,9 +30,8 @@ const path = {
 
 gulp.task('watch', function(){
 	gulp.watch('./css/**/*.scss', gulp.series('styles'));
-	// gulp.watch('./js/es6/**/*.js', gulp.series('script'));
-	// gulp.watch(path.scripts.src, scripts);
 	gulp.watch(path.scripts.src, gulp.series(scripts, 'script'));
+	gulp.watch('./**/*.pug', gulp.series('pug'));
 });
 
 gulp.task('styles', function(){
@@ -117,5 +117,12 @@ function scripts(){
 	.pipe(gulp.dest(path.scripts.dest));
 }
 
+//шаблонизатор pug
+
+gulp.task('pug', function buildHTML() {
+  return gulp.src('./*.pug')
+  .pipe(pug({pretty: true}))
+  .pipe(gulp.dest('./'))
+});
 
 gulp.task('default', gulp.parallel('watch',server));
