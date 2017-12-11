@@ -10,24 +10,20 @@ const config ={
 	// 		sourceMap: false
 	// 	})
 	// ],
-	/*module: {
-         rules: [
-             {
-                 test: '/es5/bundle.js',
-                 exclude: /(node_modules)/,
-                 use: {
-                 	loader: 'babel-loader',
-	               	 // options: {
-	                 //     presets: ['@babel/preset-env']
-	                 // }
-                 }
-                 
-             }
-         ]
-     },*/
-     // stats: {
-     //     colors: true
-     // },
+	module: {
+	  rules: [
+	    {
+	      test: /\.js$/,
+	      exclude: /(node_modules|bower_components)/,
+	      use: {
+	        loader: 'babel-loader',
+	        options: {
+	          presets: ['@babel/preset-env']
+	        }
+	      }
+	    }
+	  ]
+	}
 };
 
 module.exports = config;

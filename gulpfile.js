@@ -24,13 +24,14 @@ var pug = require('gulp-pug');
 const path = {
 	scripts:{
 		src: './js/es6/**/*.js',
-		dest: './js/es5/'
+		dest: './js'
 	}
 }
 
 gulp.task('watch', function(){
 	gulp.watch('./css/**/*.scss', gulp.series('styles'));
-	gulp.watch(path.scripts.src, gulp.series(scripts, 'script'));
+	// gulp.watch(path.scripts.src, gulp.series(scripts, 'script'));
+	gulp.watch(path.scripts.src, gulp.series(scripts));
 	gulp.watch('./**/*.pug', gulp.series('pug'));
 });
 
@@ -65,7 +66,7 @@ gulp.task('minicss', function(){
 });
 
 
-//Транспиляция ES6 в es5 с помощью babel 
+//Транспиляция ES6 в es5 с помощью babel (на случай, если сломается webpack)
 
 
 gulp.task('script', function(){
@@ -82,7 +83,7 @@ gulp.task('script', function(){
         .pipe(gulp.dest('./js'))
 });
 
-//Минификация скриптов. (выключено, т.к. выполняется webpack'ом)
+//Минификация скриптов. ((на случай, если сломается webpack)
 
 gulp.task('minijs', function() {   
 	return gulp.src('./js/*.js')
@@ -107,12 +108,14 @@ function server(){
 		}
 	});
 	browserSync.watch('./css/main.css', browserSync.reload);
+	browserSync.watch('./js/bundle.js', browserSync.reload);
+	browserSync.watch('./*.html', browserSync.reload);
 }
 
 //webpack js bundler
 
 function scripts(){
-	return gulp.src('./js/app.js')
+	return gulp.src('./js/es6/app.js')
 	.pipe(gulpWebpack(webpackConfig, webpack))
 	.pipe(gulp.dest(path.scripts.dest));
 }
