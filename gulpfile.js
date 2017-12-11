@@ -124,7 +124,15 @@ function scripts(){
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./*.pug')
-  .pipe(pug({pretty: true}))
+  .pipe(plumber({ // plumber - плагин для отловли ошибок.
+					errorHandler: notify.onError(function(err) { // nofity - представление ошибок в удобном для вас виде.
+						return {
+							title: 'PUG',
+							message: err.message
+						}
+					})
+				}))
+  .pipe(pug({pretty: '\t'}))
   .pipe(gulp.dest('./'))
 });
 

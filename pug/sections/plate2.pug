@@ -1,0 +1,29 @@
+.plate.plate2
+	.auth__title
+		span.auth__word авторизуйтесь
+	form.auth__form
+		.order__auth-row
+			label.order__form-block
+				.auth__icon.auth__man
+				input.order__auth-line.login(type="text" name="login" placeholder="Логин")
+		.order__auth-row
+			label.order__form-block
+				.auth__icon.auth__password
+				input.order__auth-line.password(type="text" name="password" placeholder="Пароль")
+		.order__auth-row
+			label.auth__checkbox
+				input.auth__checkbox-elem(type="checkbox" name="human")
+				.auth__checkbox-fake
+				.auth__checkbox-title Я человек
+		.order__auth-row
+			.auth-row-title Вы точно не робот?
+			.auth-row-choise
+				label.auth__radio
+					input.auth__radio-elem(type="radio" name="norobot")
+					.auth__radio-fake
+					.auth__radio-title Да
+				label.auth__radio
+					input.auth__radio-elem(type="radio" name="norobot")
+					.auth__radio-fake
+					.auth__radio-title Не уверен
+	+nav_welcome('nav', ["На главную","Войти"])

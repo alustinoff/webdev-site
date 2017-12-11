@@ -1,0 +1,24 @@
+include ./pug/common/_mixins
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+    meta(name='description', content='Личный сайт веб-разработчика Устинова Александра')
+    meta(name='keywords', content='#')
+    title Welcome
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+  body
+    .wrapper.welcome
+      header.header
+        .auth-button
+          a.auth-button-link(href='#') Авторизоваться
+      .container
+        include ./pug/sections/plate1
+        include ./pug/sections/plate2
+
+    .footer-line
+      p © Устинов Александр | создано с любовью в loftschool | 2017
+    script(type='text/javascript', src='js/bundle.js')
