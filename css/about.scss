@@ -1,0 +1,97 @@
+.section.hero{
+	background: url('../backgrounds/about1.jpg') center top no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 10;
+}
+
+.hero__socials{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.hero__socials .socials__item{
+	.socials__icon{
+		fill: rgba(255,255,255,.5);
+	}
+	&:hover{
+		.socials__icon{
+			fill: rgba(255,255,255,1);
+		}
+	}
+}
+// .hero__socials .socials__icon{
+// 	fill: rgb(255,255,255);
+// }
+
+
+
+.hero .user{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	.name-line{
+		color: #fff;
+	}	
+
+	.plate__title{
+		color: #fff;
+		opacity: 0.8;
+	}
+}
+
+.hamburger__pic{
+	fill: rgb(255,255,255);
+	transition: .2s;
+}
+
+.hamburger{
+	display: block;
+	height: 35px;
+	width: 40px;
+
+	&:hover svg{
+		opacity: .5;
+	}
+}
+
+.hero__menu{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.arrow__pic path{
+	fill: rgba(255,255,255,.5);
+	transition: .2s;
+}
+
+.hero__arrow{
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	transform: translateX(-50%);
+
+	&:hover{
+		.arrow__pic path{
+			fill: rgba(255,255,255,1);
+		}
+	}
+}
+
+.portfolio{
+	width: 100%;
+	height: 100%;
+	background: url("../svg/welcome/portfolio_header.svg") center center no-repeat;
+	background-size: contain;
+	z-index: -10;
+    opacity: 0.06;
+
+}
+
+.hero__stamp{
+	position: absolute;
+}

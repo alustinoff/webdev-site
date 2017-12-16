@@ -1,0 +1,22 @@
+include common/_mixins
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width')
+		meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+		meta(name='description', content='Личный сайт веб-разработчика Устинова Александра')
+		meta(name='keywords', content='Веб-разработчик')
+		link(rel='stylesheet', type='text/css', href='css/main.css')
+
+		block title
+			title Главная страница
+
+	body
+		.wrapper.wrap__internal
+			include sections/header
+
+			block content
+
+			include sections/footer

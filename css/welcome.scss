@@ -1,6 +1,22 @@
-/* .plate.plate1{
+// .plate.plate1{
+// 	display: none;
+// }
+// .plate2:hover{
+// 	transform: rotateY(180deg);
+// 	transition: .8s;
+// }
+.three-sprite{
 	display: none;
-} */
+}
+
+.socials__icon{
+	width: 30px;
+	height: 30px;
+}
+
+
+
+
 .wrapper.welcome{
 	background: url(../backgrounds/welcome-background.jpg) no-repeat;
 	background-position: center top;
@@ -58,6 +74,11 @@
 	}
 }
 
+.user{
+	display: flex;
+    flex-direction: column;
+}
+
 .plate{
 	width: 380px;
 	// height: 395px;
@@ -71,12 +92,13 @@
 
 .plate__name{
 	text-align: center;
-    margin-top: -25px;
+    // margin-top: -25px;
+    margin-top: 10px;
 }
 
 .plate__title{
 	text-align: center;
-    margin-top: -40px;
+    // margin-top: -40px;
     color: $grey;
 }
 
@@ -93,7 +115,9 @@
 	max-height: 140px;
 	border-radius: 50%;
 	margin: auto;
-	margin-top: 4%;
+	// margin-top: 4%;
+	margin-top: 25px;
+    margin-bottom: 15px;
 
 }
 
@@ -104,6 +128,9 @@
 	color: $grey;
 }
 
+.socials__welcome{
+	margin-top: 30px;
+}
 
 .socials__list{
 	display: flex;
@@ -115,18 +142,26 @@
 	margin-right: 15px;
 }
 
-.socials__item{
-	svg{
-		vertical-align: middle;
+//для варианта  полноценными иконками в файле, а не спрайта
+// .socials__item{
+// 	svg{
+// 		vertical-align: middle;
 
-		path{
-		fill: rgba(0, 191, 165, .5);
-		transition: .2s;
-		}
-	}
-	
+// 		path{
+// 		fill: rgba(0, 191, 165, .5);
+// 		transition: .2s;
+// 		}
+// 	}
+// 	&:hover svg path{
+// 		fill: rgb(0, 191, 165);
+// 	}
+// }
 
-	&:hover svg path{
+.socials__icon{
+	vertical-align: middle;
+	fill: rgba(0, 191, 165, .5);
+	transition: .2s;
+	&:hover{
 		fill: rgb(0, 191, 165);
 	}
 }
@@ -225,6 +260,10 @@ nav.nav{
 
 }
 
+// .auth__word{
+// 	text-transform: uppercase;
+// }
+
 .order__form-block{
 	display: flex;
     justify-content: center;
@@ -294,6 +333,7 @@ nav.nav{
 }
 .auth__checkbox-title{
 	font-family: 'roboto-regular';
+	color: $grey;
 }
 
 .auth__checkbox-fake{
@@ -352,7 +392,7 @@ nav.nav{
 
 .auth__radio-title{
  	color:	$grey;
- 	font-family: 'roboto-bold';
+ 	font-family: 'roboto-regular';
 }
 
 // .auth__radio{
