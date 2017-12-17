@@ -12,4 +12,12 @@ mixin user__intro()
 			.plate__name
 				span.name-line Устинов Александр
 			.plate__title
-				span.title-line Личный сайт веб разработчика
+				block subtitle
+					span.title-line Личный сайт веб разработчика
+
+mixin nav(className, items)
+	nav(class=`${className}`)
+		ul(class=`${className}__list`)
+			each item in items
+				li(class=`${className}__item`)
+					a(class=`${className}__link` href='#')= item

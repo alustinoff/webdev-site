@@ -65,30 +65,18 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var a = __webpack_require__(1);
-
-var b = __webpack_require__(2);
-
-console.log(_typeof(a) + '344444444');
-console.log(_typeof(a) + '5555555555');
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-var t = 'dgfdf';
-var j = 'sdffjjf';
-console.log('loooooooooooooooool');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-var a = 'dgfdfg';
+function initMap() {
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {
+      lat: 43.1035263,
+      lng: 131.8942434
+    },
+    zoom: 8
+  });
+}
 
 /***/ })
 /******/ ]);

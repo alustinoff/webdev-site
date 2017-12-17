@@ -15,8 +15,12 @@ html(lang='en')
 
 	body
 		.wrapper.wrap__internal
+			.wrapper__left
+			.wrapper__right
 			include sections/header
 
 			block content
 
-			include sections/footer
+		include sections/footer
+		script(src='./main.js')
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTw0MWaf2CmB4RXv-yrUcI4D0GcEul98c&callback=initMap" async defer)

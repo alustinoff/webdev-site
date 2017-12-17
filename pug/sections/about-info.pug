@@ -1,0 +1,114 @@
+include ../common/sprite-contacts
+section.section.about
+	.container
+		.about__left
+			.about__left-title
+				.about__left-stamp
+				span.block-title Обо мне
+			.about__left-content
+				.user-description
+					.user-description__image
+						img.user-description__avatar(src="img/myphoto.jpg" alt="Фотография Александра")
+					.user-description__title
+						.block-subtitle Кто я
+					.user-description__text
+						p  Я веб разработчик из Владивостока. Мне 21 год. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p  Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+		.about__right
+			.about__right-title
+				.block-subtitle Чем я могу быть <br> вам полезен
+			.user-description__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+			.skills.right__skills
+				.skills__title Frontend
+				ul.skills__list
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-95"/>
+						</svg>
+						span.item__title HTML5
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-90"/>
+						</svg>
+						span.item__title CSS3
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-75"/>
+						</svg>
+						span.item__title JavaScript & JQuery
+				.skills__title Backend
+				ul.skills__list
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-45"/>
+						</svg>
+						span.item__title PHP
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-35"/>
+						</svg>
+						span.item__title MySQL
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-10"/>
+						</svg>
+						span.item__title Node.js & npm
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-5"/>
+						</svg>
+						span.item__title Mongo.db
+				.skills__title WorkFlow
+				ul.skills__list
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-90"/>
+						</svg>
+						span.item__title git
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-80"/>
+						</svg>
+						span.item__title gulp
+					li.skills__item
+						<svg class="circles" viewBox="0 0 110 110">
+							<circle r="45" cx="50%" cy="50%" fill="none" class="circle__first"/>
+							<circle r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class="circle__second circle-60"/>
+						</svg>
+						span.item__title webpack
+section.section.map
+	#map
+	.plate.contacts
+		.contacs__title
+			.block-subtitle Контакты
+		.contacts__ways
+			ul.contacts__list
+				li.contacts__item
+					a.contacts__link(href="#" target="_blanck")
+						svg.contacts__icon
+							use(xlink:href="#skype")
+						span orient_plus
+				li.contacts__item
+					a.contacts__link(href="#" target="_blanck")
+						svg.contacts__icon
+							use(xlink:href="#envelope")
+						span ustnovay@gmail.com
+				li.contacts__item
+					a.contacts__link(href="#" target="_blanck")
+						svg.contacts__icon
+							use(xlink:href="#phone")
+						span +7 (951) 002 47-58
+				li.contacts__item
+					a.contacts__link(href="#" target="_blanck")
+						svg.contacts__icon
+							use(xlink:href="#map_marker")
+						span г.Владивосток, ул.Подножье, д.36

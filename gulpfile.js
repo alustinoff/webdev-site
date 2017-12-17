@@ -94,9 +94,9 @@ gulp.task('minijs', function() {
 //создание svg српрайтов
 
 gulp.task('svgsprite', function () {  
-    return gulp.src('./svg/welcome/*.svg')
+    return gulp.src('./svg/about/contacts/*.svg')
         .pipe(svgSprite())
-        .pipe(gulp.dest("./svg/welcome/done"));
+        .pipe(gulp.dest("./svg/about/done"));
 });
 
 //сервер и livereloader
@@ -115,7 +115,7 @@ function server(){
 //webpack js bundler
 
 function scripts(){
-	return gulp.src('./js/es6/app.js')
+	return gulp.src('./js/es6/*.js')
 	.pipe(gulpWebpack(webpackConfig, webpack))
 	.pipe(gulp.dest(path.scripts.dest));
 }

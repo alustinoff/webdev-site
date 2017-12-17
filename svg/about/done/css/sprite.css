@@ -1,0 +1,56 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.4em 8.3em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.envelope:before {
+      background-position: 0em 0em;
+      width: 2.2012em;
+      height: 1.7295000000000003em;
+  }
+
+
+
+
+  .icon.map_marker:before {
+      background-position: 0em -1.8em;
+      width: 1.5151em;
+      height: 2.1654em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -4em;
+      width: 1.8864em;
+      height: 1.8862999999999999em;
+  }
+
+
+
+
+  .icon.skype:before {
+      background-position: 0em -5.9em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+
