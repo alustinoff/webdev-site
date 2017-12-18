@@ -106,11 +106,15 @@
     transform: translateY(-100%);
 }
 
-.triangle__left{
+.triangle__left,.triangle__right{
+	fill: #fff;
+}
+
+.multi__triangles .triangle__left{
 	fill: #efeee9;
 }
 
-.triangle__right{
+.multi__triangles .triangle__right{
 	fill: #eeebdf;
 }
 
@@ -458,12 +462,13 @@
 }
 
 .footer{
+	position: relative;
 	height: 147px;
 	background: $black;
 	opacity: 0.85;
 	display: flex;
     flex-direction: column;
-    margin-top: -147px;
+    // margin-top: -147px;
 }
 
 .footer__top{
@@ -540,4 +545,5 @@
 	opacity: .5;
 	line-height: 1.5;
 	max-width: 500px;
+	font-family: 'roboto-light';
 }

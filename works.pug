@@ -1,21 +1,17 @@
 extends pug/layout
 
-block hero-stamp
-		.hero__stamp.portfolio
-
-block background
-	.wrapper__left
-	.wrapper__right
-
 block title
-	title Обо мне
+	title Мои работы
+
+block hero-stamp
+	.hero__stamp.works-stamp
 
 block hero-triangles
-	.hero__triangles.triangles.multi__triangles
+	.hero__triangles.triangles
 		<svg xmlns="http://www.w3.org/200/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle">
 			<polygon class="triangle__left" points="0,0 0,86 500.8,86 500.8,84"></polygon>
 			<polygon class="triangle__right" points="1000,0 1000,85 500,86 500,84"></polygon>
 		</svg>
-
+		
 block content
-	include pug/sections/about-info
+	include pug/sections/works-content
