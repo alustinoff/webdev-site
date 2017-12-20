@@ -6,12 +6,13 @@ html(lang='en')
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width')
 		meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+		block title
+			title Главная страница
 		meta(name='description', content='Личный сайт веб-разработчика Устинова Александра')
 		meta(name='keywords', content='Веб-разработчик')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
 
-		block title
-			title Главная страница
+		
 
 	body
 		.wrapper.wrap__internal
@@ -22,5 +23,5 @@ html(lang='en')
 			block content
 
 		include sections/footer
-		script(src='./main.js')
+		script(src='./js/bundle.js')
 		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTw0MWaf2CmB4RXv-yrUcI4D0GcEul98c&callback=initMap" async defer)

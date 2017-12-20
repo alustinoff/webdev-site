@@ -239,7 +239,7 @@ nav.nav{
 	margin: 32px 0;
 }
 
-.auth__title{
+.auth__word{
 	position: relative;
 	&:before{
 		display: block;
@@ -249,13 +249,15 @@ nav.nav{
 		background-color: #d1d2d2;
 		position: absolute;
 		top: 47%;
-		left: 13%;
+		// left: 13%;
+		left: -52px;
 	}
 
 	&:after{
-		@extend .auth__title:before;
+		@extend .auth__word:before;
 		left: auto;
-		right: 13%;
+		// right: 13%;
+		right: -52px;
 	}
 
 }
