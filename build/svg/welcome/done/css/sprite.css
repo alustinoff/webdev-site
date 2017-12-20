@@ -1,0 +1,47 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 3.0011em 6.3em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.github:before {
+      background-position: 0em 0em;
+      width: 2.6em;
+      height: 2.2em;
+  }
+
+
+
+
+  .icon.in:before {
+      background-position: 0em -2.2em;
+      width: 2.4em;
+      height: 2.2938em;
+  }
+
+
+
+
+  .icon.vk:before {
+      background-position: 0em -4.5em;
+      width: 3.0011em;
+      height: 1.7123000000000002em;
+  }
+
+
+
+
+

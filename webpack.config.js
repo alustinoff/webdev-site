@@ -5,11 +5,11 @@ const config ={
 	output: {
 		filename: './bundle.js'
 	},
-	// plugins: [
-	// 	new UglifyJSPlugin({
-	// 		sourceMap: false
-	// 	})
-	// ],
+	plugins: [
+		new UglifyJSPlugin({
+			sourceMap: false
+		})
+	],
 	module: {
 	  rules: [
 	    {
