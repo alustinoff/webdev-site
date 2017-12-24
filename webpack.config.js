@@ -5,11 +5,18 @@ const config ={
 	output: {
 		filename: './bundle.js'
 	},
-	plugins: [
-		new UglifyJSPlugin({
-			sourceMap: false
-		})
-	],
+	// plugins: [
+	// 	new UglifyJSPlugin({
+	// 		sourceMap: false
+	// 	})
+	// ],
+	/*plugins: [
+	  new webpack.ProvidePlugin({
+	    $: "jquery",
+	    jQuery: "jquery",
+	    "window.jQuery": "jquery"
+	  })
+	],*/
 	module: {
 	  rules: [
 	    {

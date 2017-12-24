@@ -16,9 +16,14 @@ html(lang='en')
         .auth-button
           a.auth-button-link(href='#') Авторизоваться
       .container
-        include ./pug/sections/plate1
-        include ./pug/sections/plate2
+        .flipper-block
+          include ./pug/sections/plate1
+          include ./pug/sections/plate2
 
     .footer-line
       p © Устинов Александр | создано с любовью в loftschool | 2017
-    script(type='text/javascript', src='js/bundle.js')
+    //- script(type='text/javascript', src='js/bundle.js')
+    script(src='./js/jquery-3.2.1.min.js')
+    //- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    //- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    //- <script src="./js/es6/flipper.js"></script>
