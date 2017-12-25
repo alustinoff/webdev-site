@@ -467,6 +467,10 @@ nav.nav{
 }
 
 
+.flipper-block.flipped .plate1 .nav{
+    backface-visibility: hidden;
+}
+
 
 @media screen and (max-width: 1200px){
 	.welcome .header{
@@ -542,6 +546,33 @@ nav.nav{
 	    position: relative;
 	    z-index: 10;
 	}
+
+	.welcome .container{
+		width: auto;
+	}
+
+	.flipper-block{
+		width: 348px;
+	}
 	
+}
+
+@media screen and (max-width: 360px){
+	.flipper-block{
+		width: 300px;
+	}
+	
+	.flipper-block .plate{
+		width: 300px;
+	}
+
+	.plate2 .auth__word{
+		font-size: 30px;
+	}
+
+	.order__auth-line{
+		width: 230px;
+	}
+
 }
 
