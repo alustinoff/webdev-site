@@ -90,3 +90,29 @@
 	padding-bottom: 60px;
 	border-bottom: 5px solid rgba(55,62,66,0.07);
 }
+
+@media screen and (max-width: 900px){
+	.blog-container{
+		flex-wrap: wrap;
+	}
+
+	.blog-navigation{
+		display: none;
+	}
+
+	.blog__content{
+		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.article__title{
+		font-size: 21px;
+	}
+	.article__date,.article__content{
+		font-size: 14px;
+	}
+	.blog__content{
+		padding: 0 9px;
+	}
+}

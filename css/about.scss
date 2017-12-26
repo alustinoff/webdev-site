@@ -506,6 +506,11 @@
 	font-size: 16px;
 	font-family: 'roboto-medium';
 	line-height: 1.5;
+	transition: .2s;
+
+	&:hover{
+		color: $green-light;
+	}
 }
 
 .soc__item{
