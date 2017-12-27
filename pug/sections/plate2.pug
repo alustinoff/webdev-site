@@ -26,8 +26,5 @@
 					input.auth__radio-elem(type="radio" name="norobot")
 					.auth__radio-fake
 					.auth__radio-title Не уверен
-	// -var links_list = [{title: "На главную",link: ['/']},{title: "Войти",link: ["about.html"]}];
-		
-	//- for some in links_list
-		+nav_welcome23(some, 'nav')
-	+nav_welcome('nav', ["На главную","Войти"])
+	
+	+nav_welcome('nav', {'/':"На главную",'about.html':"Войти"})

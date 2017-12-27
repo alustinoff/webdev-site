@@ -1,9 +1,9 @@
 mixin nav_welcome(className, items)
 	nav(class=`${className}`)
 		ul(class=`${className}__list`)
-			each item in items
+			each item, link in items
 				li(class=`${className}__item`)
-					a(class=`${className}__link` href='#')= item
+					a(class=`${className}__link` href=link)= item
 
 mixin user__intro()
 		.user
@@ -22,11 +22,3 @@ mixin nav(className, items)
 			each item in items
 				li(class=`${className}__item`)
 					a(class=`${className}__link` href='#')= item
-
-
-mixin nav_welcome23(links, className)
-		nav(class=`${className}`)
-			ul(class=`${className}__list`)
-				each item in links
-					li(class=`${className}__item`)
-						a(class=`${className}__link` href=`${links.link}`)= links.title
