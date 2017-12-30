@@ -60,9 +60,9 @@ gulp.task('styles', function(){
 
 gulp.task('minicss', function(){  
 	return gulp.src('./css/main.css')
-		.pipe(concat('./mainbuild.css'))
+		.pipe(concat('./mini/main.css'))
 		.pipe(cssnano())
-		.pipe(gulp.dest('./css'));
+		.pipe(gulp.dest('./css/mini'));
 });
 
 

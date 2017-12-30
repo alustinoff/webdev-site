@@ -19,6 +19,6 @@ mixin user__intro()
 mixin nav(className, items)
 	nav(class=`${className}`)
 		ul(class=`${className}__list`)
-			each item in items
+			each item, link in items
 				li(class=`${className}__item`)
-					a(class=`${className}__link` href='#')= item
+					a(class=`${className}__link` href=link)= item
