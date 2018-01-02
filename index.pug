@@ -10,8 +10,17 @@ html(lang='en')
     meta(name='keywords', content='#')
     title Welcome
     link(rel='stylesheet', type='text/css', href='css/main.css')
+    //- script(src='js/showwrap.js')
   body
     .wrapper.welcome
+      .parallax#parallax
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 5.png" alt="" class="parallax__image parallax__image_7"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 8.png" alt="" class="parallax__image parallax__image_6"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 7.png" alt="" class="parallax__image parallax__image_5"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 6.png" alt="" class="parallax__image parallax__image_4"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 4.png" alt="" class="parallax__image parallax__image_3"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 2.png" alt="" class="parallax__image parallax__image_2"></div>
+        <div class="parallax__layer"><img src="backgrounds/parallax/Layer 1.png" alt="" class="parallax__image parallax__image_1"></div>
       header.header
         .auth-button
           a.auth-button-link(href='#') Авторизоваться
@@ -23,8 +32,10 @@ html(lang='en')
     .footer-line
       p © Устинов Александр | создано с любовью в loftschool | 2017
     //- script(type='text/javascript', src='js/bundle.js')
+    script(src='js/showwrap.js')
     script(src='js/jquery-3.2.1.min.js')
     //- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     //- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     //- <script src="./js/es6/flipper.js"></script>
     <script src="./js/flipper.js"></script>
+    script(src='js/parallax.js')
