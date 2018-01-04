@@ -10,8 +10,11 @@ html(lang='en')
     meta(name='keywords', content='#')
     title Welcome
     link(rel='stylesheet', type='text/css', href='css/main.css')
-    //- script(src='js/showwrap.js')
+    link(href="./favicon.png", rel="icon", type="image/png")
   body
+    #page-preloader.preloader
+      .round1
+      span#load-perc 0%
     .wrapper.welcome
       .parallax#parallax
         <div class="parallax__layer"><img src="backgrounds/parallax/Layer 5.png" alt="" class="parallax__image parallax__image_7"></div>
@@ -33,6 +36,7 @@ html(lang='en')
       p © Устинов Александр | создано с любовью в loftschool | 2017
     //- script(type='text/javascript', src='js/bundle.js')
     script(src='js/showwrap.js')
+    script(src='js/loader.js')
     script(src='js/jquery-3.2.1.min.js')
     //- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     //- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>

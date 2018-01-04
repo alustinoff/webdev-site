@@ -11,6 +11,7 @@ html(lang='en')
 		meta(name='description', content='Личный сайт веб-разработчика Устинова Александра')
 		meta(name='keywords', content='Веб-разработчик')
 		link(rel='stylesheet', type='text/css', href='css/main.css')
+		link(href="./favicon.png", rel="icon", type="image/png")
 
 		
 
@@ -23,6 +24,7 @@ html(lang='en')
 			block content
 
 		include sections/footer
+		block scripts
 		script(src='./js/bundle.js')
 		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTw0MWaf2CmB4RXv-yrUcI4D0GcEul98c&callback=initMap" async defer)
 		script(src='./js/scroll.js')

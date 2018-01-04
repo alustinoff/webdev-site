@@ -7,8 +7,83 @@
 	height: 30px;
 }
 
+.preloader{
+	position: fixed;
+	display: flex;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: 100;
+	background: url('../backgrounds/_preloader-bg.jpg') center no-repeat;
+	background-color: $green-light;
+	opacity: .5;
+	transition: 1s all;
+	opacity: 1;
+	visibility: visible;
 
+	&.done{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
 
+.round1,.round1:before,.round1:after{
+	border: 3px solid transparent;
+	border-radius: 50%;
+}
+
+.round1{
+	margin: auto;
+	width: 150px;
+	height: 150px;
+	position: relative;
+	// border-top-color: #bac900;
+	border-top-color: #fff;
+	animation: spin 1s infinite linear;
+}
+.round1:before,.round1:after{
+	content: "";
+	position: absolute;
+}
+
+.round1:before{
+	top: 10px;
+	right: 10px;
+	left: 10px;
+	bottom: 10px;
+	// border-top-color: #00abd4;
+	border-top-color: #fff;
+	animation: spin 2s infinite linear;
+}
+
+.round1:after{
+	top: 23px;
+	right: 23px;
+	left: 23px;
+	bottom: 23px;
+	// border-top-color: #ff1400;
+	border-top-color: #fff;
+	animation: spin 3s infinite linear;
+}
+
+#load-perc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	font-size: 20px;
+	color: #fff;
+}
+
+@keyframes spin{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
 
 .wrapper.welcome{
 	// background: url(../backgrounds/welcome-background.jpg) no-repeat;
