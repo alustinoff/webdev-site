@@ -19,12 +19,18 @@
 			.auth-row-title Вы точно не робот?
 			.auth-row-choise
 				label.auth__radio
-					input.auth__radio-elem(type="radio" name="norobot")
+					input.auth__radio-elem.auth__radio-elem-true(type="radio" name="norobot")
 					.auth__radio-fake
 					.auth__radio-title Да
 				label.auth__radio
-					input.auth__radio-elem(type="radio" name="norobot")
+					input.auth__radio-elem.auth__radio-elem-false(type="radio" name="norobot")
 					.auth__radio-fake
 					.auth__radio-title Не уверен
 	
-	+nav_welcome('nav', {'/':"На главную",'about.html':"Войти"})
+	//- +nav_welcome('nav', {'/':"На главную",'about.html':"Войти"})
+	nav.nav
+		ul.nav__list
+			li.nav__item
+				a.nav__link#exit(href="./") На главную
+			li.nav__item
+				a.nav__link#enter(href="/admin.html") Войти

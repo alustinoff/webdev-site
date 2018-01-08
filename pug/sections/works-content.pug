@@ -81,12 +81,21 @@ section.section.review
 					span.auth__word Связаться со мной
 				form.contacts-form
 					label.contact-form__block
-						input.contact-form__input(type="text" placeholder="Имя" name="name")
+						input.contact-form__input#input-name(type="text" placeholder="Имя" name="name")
 					label.contact-form__block
-						input.contact-form__input(type="text" placeholder="Email" name="mail")
+						input.contact-form__input#input-mail(type="text" placeholder="Email" name="mail")
 					label.contact-form__block
 						textarea.contact-form__input.contact-form__input-textarea(name="comment" placeholder="Ваше сообщение")
-				+nav_welcome('nav', ["Отправить","Очистить"])
+				//- +nav_welcome('nav', ["Отправить","Очистить"])
+				nav.nav
+					ul.nav__list
+						li.nav__item
+							a.nav__link#send(href="#") Отправить
+						li.nav__item
+							a.nav__link#reset(href="#") Очистить
+				.modal-block
+					.modal-block__text Сообщение отправлено (нет)
+					button.modal-block__button(type="button") Закрыть
 			a.up__link(href="#")
 					<svg class="up__link-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.736px" height="27.435px" viewBox="0 0 42.736 27.435" enable-background="new 0 0 42.736 27.435" xml:space="preserve">
 						<g>

@@ -88,12 +88,12 @@
 								<div class="auth-row-title">Вы точно не робот?</div>
 								<div class="auth-row-choise">
 									<label class="auth__radio">
-										<input class="auth__radio-elem" type="radio" name="norobot">
+										<input class="auth__radio-elem auth__radio-elem-true" type="radio" name="norobot">
 										<div class="auth__radio-fake"></div>
 										<div class="auth__radio-title">Да</div>
 									</label>
 									<label class="auth__radio">
-										<input class="auth__radio-elem" type="radio" name="norobot">
+										<input class="auth__radio-elem auth__radio-elem-false" type="radio" name="norobot">
 										<div class="auth__radio-fake"></div>
 										<div class="auth__radio-title">Не уверен</div>
 									</label>
@@ -102,8 +102,8 @@
 						</form>
 						<nav class="nav">
 							<ul class="nav__list">
-								<li class="nav__item"><a class="nav__link" href="/">На главную</a></li>
-								<li class="nav__item"><a class="nav__link" href="about.html">Войти</a></li>
+								<li class="nav__item"><a class="nav__link" id="exit" href="./">На главную</a></li>
+								<li class="nav__item"><a class="nav__link" id="enter" href="/admin.html">Войти</a></li>
 							</ul>
 						</nav>
 					</div>
