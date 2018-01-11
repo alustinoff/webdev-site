@@ -115,8 +115,14 @@
 }
 
 .slider__item-pic{
-	max-width: 460px;
-	max-height: 310px;
+	// max-width: 460px;
+	// max-height: 310px;
+    max-width: 70%;
+    max-height: 95%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
 }
 
 .slider__buttons{
@@ -129,21 +135,21 @@
 	flex: 1 1 50%;
 	position: relative;
 
-	&:hover{
-		.prev-image{
-		filter: brightness(60%);
-		}
-	}
+	// &:hover{
+	// 	.prev-image{
+	// 	filter: brightness(60%);
+	// 	}
+	// }
 }
 
 .button-next{
 	flex: 1 1 50%;
 	position: relative;
-	&:hover{
-		.next-image{
-		filter: brightness(60%);
-		}
-	}
+	// &:hover{
+	// 	.prev-image{
+	// 	filter: brightness(60%);
+	// 	}
+	// }
 }
 
 .arrow-prev,.arrow-next{
@@ -151,6 +157,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 10;
 }
 
 .prev-item,.next-item{
@@ -161,8 +168,38 @@
 .prev-image,.next-image{
 	width: 100%;
 	height: 100%;
-	filter: brightness(40%);
-	transition: .2s;
+	// filter: brightness(40%);
+	// transition: .2s;
+	position: relative;
+	z-index: 0;
+}
+
+.prev-item,.next-item{
+	// position: relative;
+	// z-index: 0;
+
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		z-index: 10;
+		background: #000;
+		opacity: 0.5;
+		transition: .3s;
+	}
+
+}
+
+.button-prev:hover .prev-item:after{
+	opacity: 0.2;
+}
+
+.button-next:hover .next-item:after{
+	opacity: 0.2;
 }
 
 .review{
@@ -378,6 +415,54 @@
 .modal-block_active{
 	display: flex;
 }
+
+.prev-item .works-slider__control-item{
+	position:absolute;
+	top:-100%;
+	left:0;
+	width:100%;
+	height:100%;
+	bottom:0%
+}
+
+.prev-item .works-slider__control-item.active{
+	top: 0;
+}
+
+.next-item .works-slider__control-item{
+	position:absolute;
+	bottom:0%;
+	left:0;
+	width:100%;
+	height:100%;
+	top:100%;
+}
+
+.next-item .works-slider__control-item.active{
+	top: 0;
+}
+
+.button-prev,.button-next{
+	overflow: hidden;
+}
+
+.slider__item_active{
+	position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bounceIn{
+	from, 20%, 40%, 60%, 80%, 
+	to{animation-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1)}
+	0%{opacity:0;transform:scale3d(0.3, 0.3, 0.3)}
+	20%{transform:scale3d(1.1, 1.1, 1.1)}
+	40%{transform:scale3d(0.9, 0.9, 0.9)}
+	60%{opacity:1;transform:scale3d(1.03, 1.03, 1.03)}
+	80%{transform:scale3d(0.97, 0.97, 0.97)}
+	to{opacity:1;transform:scale3d(1, 1, 1)}}
+
+	.letter-span.active{opacity:1;animation:bounceIn .3s}
 
 @media screen and (max-width: 950px){
 	.works-slider{

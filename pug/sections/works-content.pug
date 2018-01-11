@@ -7,10 +7,9 @@ section.section.works#1
 		.works-slider
 			.slider__info
 				.slider__info-content
-					.slider__title
-						.block-subtitle Сайт школы онлайн <br> Образования
-					.slider__technologies HTML, CSS, JAVASCRIPT
-					a.site-to-link(href="#")
+					.slider__title.block-subtitle 
+					.slider__technologies 
+					a.site-to-link(href="#" target="_blank")
 						.link__pic
 							<svg class="link-pic-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.125px" height="19.125px" viewBox="0 0 19.125 19.125" enable-background="new 0 0 19.125 19.125" xml:space="preserve">
 								<g>
@@ -19,13 +18,20 @@ section.section.works#1
 							</svg>
 						span Посмотреть сайт
 			.slider__display
-				.slider__item.slider__item_active
-					img.slider__item-pic(src="./img/works1.png")
+				.slider__item_active
+					//- img.slider__item-pic(src="./img/works1.png")
+					img.slider__item-pic(src="" alt="")
 			.slider__buttons
 				.button-prev
-					a(href="#")
+					a.works-slider__control-btn_left(href="#")
 						.prev-item
-							img.prev-image(src="./img/works2.jpg")
+							//- img.prev-image(src="./img/works2.jpg")
+							<ul class="works-slider__control-list">
+								<li data-full="./img/works1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/" class="works-slider__control-item"><img src="./img/works1.png" class="prev-image works-slider___control-img"></li>
+								<li data-full="./img/works2.jpg" data-title="Школа онлай-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/" class="works-slider__control-item"><img src="./img/works2.jpg" class="prev-image works-slider___control-img"></li>
+								<li data-full="./img/works3.jpg" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/" class="works-slider__control-item"><img src="./img/works3.jpg" class="prev-image works-slider___control-img"></li>
+								//- <li data-full="./img/content/slider/4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/" class="works-slider__control-item"><img src="./img/content/slider/4.png" class="prev-image works-slider___control-img"></li>
+							</ul>
 						.arrow-prev
 							
 								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.736px" height="27.435px" viewBox="0 0 42.736 27.435" enable-background="new 0 0 42.736 27.435" xml:space="preserve">
@@ -34,9 +40,9 @@ section.section.works#1
 									</g>
 								</svg>
 				.button-next
-					a(href="#")
+					a.works-slider__control-btn_right(href="#")
 						.next-item
-							img.next-image(src="./img/works3.jpg")
+							//- img.next-image(src="./img/works3.jpg")
 						.arrow-next
 								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="42.736px" height="27.435px" viewBox="0 0 42.736 27.435" enable-background="new 0 0 42.736 27.435" xml:space="preserve">
 									<g>
