@@ -19,6 +19,7 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 var pug = require('gulp-pug');
+const imagemin = require('gulp-imagemin');
 
 
 const path = {
@@ -135,5 +136,13 @@ gulp.task('pug', function buildHTML() {
   .pipe(pug({pretty: '\t'}))
   .pipe(gulp.dest('./'))
 });
+
+// Оптимизация картинок
+gulp.task('image', () =>
+    gulp.src('./backgrounds/parallax/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./backgrounds/optimised_images/'))
+);
+
 
 gulp.task('default', gulp.parallel('watch',server));
