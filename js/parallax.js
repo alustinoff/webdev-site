@@ -1,4 +1,4 @@
-var parallaxContainer = document.getElementById('parallax');
+/*var parallaxContainer = document.getElementById('parallax');
 var layers = parallaxContainer.children;
 
 var moveLayers = function(e){
@@ -17,4 +17,4 @@ var moveLayers = function(e){
 		 }
 	}
 
-window.addEventListener('mousemove', moveLayers)
+window.addEventListener('mousemove', moveLayers)*/

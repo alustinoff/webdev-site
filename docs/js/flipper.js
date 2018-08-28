@@ -1,5 +1,5 @@
-var flipBlock = $('.flipper-block');
-var authButton = $('.auth-button-link');
+var flipBlock = document.getElementsByClassName("flipper-block")[0];
+var authButton = document.getElementsByClassName("auth-button-link")[0];
 var exit = document.getElementById('exit');
 var enterButton = document.getElementById('enter');
 var login = document.getElementsByClassName('login')[0];
@@ -10,7 +10,26 @@ var robot = document.getElementsByClassName('auth__radio-elem-false')[0];
 
 ////////////////////////////  flipp   //////////////////////
 
-$(window).click(function(event){
+window.addEventListener("click", function(event){
+	var target = event.target;
+	var flip = target.closest('.flipper-block');
+	if(target == authButton){
+		event.preventDefault();
+		flipBlock.classList.add("flipped");
+		authButton.style.display = "none";
+	}
+	else if (!flip || target == exit){
+		event.preventDefault();
+		if(flipBlock.classList.contains('flipped')){
+			flipBlock.classList.remove("flipped");
+			authButton.style.display = "inline";	
+		}
+		
+	}
+});
+
+
+/*$(window).click(function(event){
 	var target = event.target;
 	var flip = target.closest('.flipper-block');
 	if(target == authButton[0]){
@@ -26,15 +45,21 @@ $(window).click(function(event){
 		}
 		
 	} 
-});
+});*/
 
 //////////////////////////////     validation form //////////////////////////
 
 exit.addEventListener('click', function(e){
 	e.preventDefault();
+	flipBlock.classList.toggle("flipped");
+	authButton.style.display = "inline";	
+});
+
+/*exit.addEventListener('click', function(e){
+	e.preventDefault();
 	flipBlock.toggleClass('flipped');
 	authButton.css("display","inline");	
-});
+});*/
 
 function validateForm(){
 	if(!login.value){

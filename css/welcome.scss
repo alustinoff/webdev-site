@@ -86,9 +86,9 @@
 }
 
 .wrapper.welcome{
-	// background: url(../backgrounds/welcome-background.jpg) no-repeat;
-	// background-position: center top;
-	// background-size: cover;
+	background: url(../backgrounds/welcome-background.jpg) no-repeat;
+	background-position: center top;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
     justify-content: space-between;
@@ -189,7 +189,7 @@
 .plate{
 	width: 380px;
 	// height: 395px;
-	height: 349px;
+	// height: 349px;
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: 5px 5px 0 0;
 	display: flex;
@@ -564,29 +564,36 @@ nav.nav{
 	position: relative;
 	margin: 0 auto;
 
-	perspective: 760px;
+	perspective: 1000px;
 	transition: transform 1s;
 	transform-style: preserve-3d;
 	-webkit-transform-origin: 50% 50%;
 }
 
-.plate1,.plate2{
+.front, .back{
 	position: absolute;
 	backface-visibility: hidden;
+	transition: 1s;
 }
 
 .back{
-    transform: rotateY( -180deg );
+    transform: rotateY( 180deg );
 }
 
-.flipper-block.flipped {
-    transform: rotateY( -180deg );
+.flipper-block.flipped .front {
+	transform: rotateY( 180deg );
+}
+.flipper-block.flipped .back {
+	transform: rotateY( 360deg );
 }
 
+// .flipper-block.flipped {
+//     transform: rotateY( -180deg );
+// }
 
-.flipper-block.flipped .plate1 .nav{
-    backface-visibility: hidden;
-}
+// .flipper-block.flipped .plate1 .nav{
+//     backface-visibility: hidden;
+// }
 
 
 @media screen and (max-width: 1200px){
@@ -668,8 +675,11 @@ nav.nav{
 		width: auto;
 	}
 
-	.flipper-block{
-		width: 348px;
+	// .flipper-block{
+	// 	width: 348px;
+	// }
+	.welcome .plate{
+		width: 320px;
 	}
 	
 }

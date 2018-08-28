@@ -1,4 +1,4 @@
-var isMobile = {
+/*var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
     },
@@ -31,3 +31,4 @@ var showWrap = function(){
     }
 };
 document.addEventListener('DOMContentLoaded', showWrap);
+*/
